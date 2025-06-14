@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" href="style.css"> 
+<meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+
+<head>
+<link rel="stylesheet" href="style1.css"> 
+<meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWB_XIdwc4c_ENdZgtHjhDhymq3FNHGaY_yA&s" alt="Logo" class="logo-img">
+</div>
+                </div>
+                <div class="logo-text">BANFORA</div>
+            </div>
+            <nav class="nav-menu">
+<label for="nav_select">Menu</label>
+<select id="nav_select" name="navigation" onchange="naviguer()">
+  <option value="accueil.html">Accueil</option>
+  <option value="patrimoine.html">Patrimoine</option>
+  <option value="hotel.html">Réservation d'hôtel</option>
+  <option value="galerie.html">Galerie</option>
+</select>
+
+<script>
+  function naviguer() {
+    const select = document.getElementById("nav_select");
+    const page = select.value;
+    window.location.href = page;
+  }
+</script>
+                    </select>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BANFORA</h1>
+            <p>Découvrez la perle des Cascades du Burkina Faso</p>
+            <button class="description-btn" onclick="openDescription()">
+                Description
+            </button>
+        </div>
+    </section>
+
+    <!-- Description Overlay -->
+    
+                <h2>Description de la ville</h2>
+                  </div>
+            <div class="description-content">
+                <p>
+                    <strong>Banfora</strong> est une ville située dans le sud-ouest du Burkina Faso, capitale de la région des Cascades et de la province de la Comoé.Avec une superficie de 93 400 ha et une densité de 179 hab./km2,elle est un important centre économique et commercial, ainsi qu'un lieu de passage stratégique sur la route reliant la Côte d'Ivoire au Mali.
+
+                </p>
+                <p>
+                    La ville est également connue pour ses sites touristiques exceptionnels, notamment les cascades de Karfiguela, les dômes de Fabédougou, et le lac de Tengrela. Ces merveilles naturelles font de Banfora une destination incontournable pour les amateurs de tourisme écologique et d'aventure.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contenu principal du site -->
+    </main>
+
+    <script>
+        function openDescription() {
+            document.getElementById('descriptionOverlay').classList.add('active');
+        }
+
+        function closeDescription() {
+            document.getElementById('descriptionOverlay').classList.remove('active');
+        }
+
+        // Fermer la modal en cliquant sur l'overlay
+        document.getElementById('descriptionOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDescription();
+            }
+        });
+
+        // Fermer avec la touche Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDescription();
+            }
+        });
+    </script>
+</body>
+</html>
